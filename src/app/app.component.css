@@ -28,7 +28,7 @@
         #2F6D80
 */
 
-.signuppage{
+.signUpPage{
     display: flex;
     gap: 20px;
     flex-direction: column;

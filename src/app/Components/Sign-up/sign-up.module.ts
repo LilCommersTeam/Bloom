@@ -6,6 +6,7 @@ import {SignUpSecondStepComponent} from "./Second-step/sign-up-second-step.compo
 import {SignUpThirdStepComponent} from "./Third-step/sign-up-third-step.component";
 import { ReactiveFormsModule } from "@angular/forms";
 
+
 @NgModule({
   imports: [
     RouterOutlet,

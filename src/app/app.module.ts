@@ -12,6 +12,7 @@ import {SignUpModule} from "./Components/Sign-up/sign-up.module";
     CommonModule,
     RouterModule.forChild(routes),
     SignUpModule
+
   ],
   declarations: [
 

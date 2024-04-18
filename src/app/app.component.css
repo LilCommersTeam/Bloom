@@ -27,3 +27,13 @@
         #6AA4B0
         #2F6D80
 */
+
+.signuppage{
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    background-color: #2F6D80;
+    align-items: center;
+}

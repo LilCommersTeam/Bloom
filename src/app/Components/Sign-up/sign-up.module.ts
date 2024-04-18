@@ -4,11 +4,13 @@ import { SignUpFirstStepComponent} from "./First-step/sign-up-first-step.compone
 import {NgModule} from "@angular/core";
 import {SignUpSecondStepComponent} from "./Second-step/sign-up-second-step.component";
 import {SignUpThirdStepComponent} from "./Third-step/sign-up-third-step.component";
+import { ReactiveFormsModule } from "@angular/forms";
 
 @NgModule({
   imports: [
     RouterOutlet,
     CommonModule,
+    ReactiveFormsModule
   ],
   declarations: [
     SignUpFirstStepComponent,

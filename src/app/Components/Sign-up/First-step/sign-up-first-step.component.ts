@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { AbstractControl } from '@angular/forms';
+import {SignUpService} from "../sign-up.service";
 
 
 @Component({
@@ -13,7 +14,9 @@ export class SignUpFirstStepComponent {
   form: FormGroup;
   disabled: Boolean = false;
 
-  constructor(){
+  constructor(
+    private service : SignUpService
+  ){
     this.form = new FormGroup(
       {
       email: new FormControl('', [Validators.required, Validators.email]),

@@ -5,11 +5,11 @@ import {SignUpService} from "./sign-up.service";
 
 
 @Component({
-  selector: 'sign-up-first-step',
+  selector: 'sign-up-component',
   templateUrl: './sign-up.component.html',
   styleUrl: './sign-up.component.css'
 })
-export class SignUpFirstStepComponent implements OnInit {
+export class SignUpComponent implements OnInit {
 
   form: FormGroup;
   disabled: Boolean = false;

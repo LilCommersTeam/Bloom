@@ -1,6 +1,6 @@
 import {RouterModule, RouterOutlet} from "@angular/router";
 import {CommonModule} from "@angular/common";
-import { SignUpFirstStepComponent} from "./sign-up.component";
+import { SignUpComponent} from "./sign-up.component";
 import {NgModule} from "@angular/core";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
@@ -15,7 +15,7 @@ import {HttpClientModule} from "@angular/common/http";
     HttpClientModule
   ],
   declarations: [
-    SignUpFirstStepComponent,
+    SignUpComponent,
   ],
 
 })

@@ -4,9 +4,9 @@ import { AbstractControl } from '@angular/forms';
 
 
 @Component({
-  selector: 'log-in-component',
-  templateUrl: './log-in.component.html',
-  styleUrl: './log-in.component.css'
+  selector: 'dash-component',
+  templateUrl: './dash.component.html',
+  styleUrl: './dash.component.css'
 })
 
-export class LogInComponent {}
+export class DashboardComponent {}

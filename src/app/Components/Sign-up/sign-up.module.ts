@@ -1,10 +1,8 @@
 import {RouterModule, RouterOutlet} from "@angular/router";
 import {CommonModule} from "@angular/common";
-import { SignUpFirstStepComponent} from "./First-step/sign-up-first-step.component";
+import { SignUpFirstStepComponent} from "./sign-up.component";
 import {NgModule} from "@angular/core";
-import {SignUpSecondStepComponent} from "./Second-step/sign-up-second-step.component";
-import {SignUpThirdStepComponent} from "./Third-step/sign-up-third-step.component";
-import { ReactiveFormsModule } from "@angular/forms";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
 
 
@@ -13,14 +11,11 @@ import {HttpClientModule} from "@angular/common/http";
     RouterOutlet,
     CommonModule,
     ReactiveFormsModule,
+    FormsModule,
     HttpClientModule
   ],
   declarations: [
     SignUpFirstStepComponent,
-    SignUpSecondStepComponent,
-    SignUpThirdStepComponent
-
-
   ],
 
 })

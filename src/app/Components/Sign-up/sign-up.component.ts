@@ -17,8 +17,9 @@ export class SignUpComponent {
     return control.get('password')?.value ===
       control.get('confirmPassword')?.value
       ? null
-      : { PasswordMismatch: true}
-    
+      : { PasswordMismatch: false}
+
+
   }
 
   signupform = this.fb.group({
@@ -27,7 +28,7 @@ export class SignUpComponent {
     password: ['', Validators.required],
     confirmPassword: ['', Validators.required]
 
-  },  { Validators: this.ConfirmPassword
+  },  { validators: this.ConfirmPassword
   }
 
 )
@@ -35,7 +36,7 @@ export class SignUpComponent {
 
 
   constructor(private fb: FormBuilder) {
-    
+
   }
 
   get username() {

@@ -1,30 +1,53 @@
-<form (ngSubmit)="onSubmit()" [formGroup]="form">
+<form [formGroup]="signupform">
    <div class="formContainer">
-      <h1>Sign Up Form</h1>
+      <h1>Signup Form</h1>
       <hr>
+      <div class="field">
+       <label for="username"><b>Username</b></label>
+      <input type="text" formControlName="username" name="txt" placeholder="User name" maxlength="25" required>
+      <small *ngIf="username.invalid && (username.dirty || username.touched)">
+         <div *ngIf="username.errors?.['required']">Username is required</div>
+         <div *ngIf="username.errors?.['pattern']">Username should be valid</div>
+    </small>
+      </div>
+      
+      <div class="field">
       <label for="email"><b>Email</b></label>
-      <input type="text" name="txt" placeholder="User name" [(ngModel)]="signupObj.userName" required>
+      <input type="text" formControlName="email" name="email" placeholder="Enter Email" maxlength="40" required>
+      <small *ngIf="email.invalid && (email.dirty || email.touched)">
+           <div *ngIf="email.errors?.['required']">Email is required</div>
+           <div *ngIf="email.errors?.['email']">Email should be valid</div>
+      </small>
+      </div>
 
-      <label for="email"><b>Email</b></label>
-      <input type="email" name="email" placeholder="Enter Email" [(ngModel)]="signupObj.email" required>
+       <div class="field">
+           <label for="password"><b>Password</b></label>
+           <input type="password" formControlName="password" name="password" placeholder="Enter Password" maxLength="30" required>
+           <small *ngIf="password.invalid && (password.dirty || password.touched)">
+               <div *ngIf="password.errors?.['required']">Password is required</div>
+          </small>
+       </div>
 
-      <label for="password"><b>Password</b></label>
-      <input type="password" name="password" placeholder="Enter Password" [(ngModel)]="signupObj.password" required>
-
-      <label for="confirmPassword"><b>Confirm Password</b></label>
-      <input type="password" name="confirmPassword" placeholder="Repeat Password" required>
-
+       <div class="field">
+         <label for="confirmPassword"><b>confirm Password</b></label>
+         <input type="password" formControlName="confirmPassword" name="confirmPassword" placeholder="Confirm Password" maxLength="30" required>
+         <small *ngIf="confirmPassword.invalid && (confirmPassword.dirty || confirmPassword.touched)">
+             <div *ngIf="confirmPassword.errors?.['required']">Confirmation is required</div>
+             <div *ngIf="signupform?.errors?.['PasswordMismatch'] && signupform?.touched">
+         Password should match
+        </div>
+        </small>
+        
+     </div>
+     
          <input type="checkbox" name="remember">
      <label for="rememberCheckBox">Remember me</label>
 
-      <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
       <div>
-        <button (click)="onSubmit()" [disabled]="disabled">Sign Up</button>
+        <button [disabled]="signupform.invalid">Sign Up</button>
         <br>
-        <div *ngIf="form.errors?.['mismatch'] && form?.touched">
-          Password doesn't match!
+        <div>Already have an account? <a routerLink="/Log-in">Register</a> </div>
         </div>
-      </div>
    </div>
 </form>
 

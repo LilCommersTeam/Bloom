@@ -1,6 +1,6 @@
 import { NgModule }      from '@angular/core';
 import { AppComponent }  from './app.component';
-import {RouterModule, RouterOutlet} from "@angular/router";
+import {RouterLink, RouterModule, RouterOutlet} from "@angular/router";
 import {CommonModule} from "@angular/common";
 import {routes} from "./app.routes";
 import {SignUpModule} from "./Components/Sign-up/sign-up.module";
@@ -14,7 +14,8 @@ import { FormsModule } from '@angular/forms';
     CommonModule,
     RouterModule.forChild(routes),
     SignUpModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterLink
 
   ],
   declarations: [

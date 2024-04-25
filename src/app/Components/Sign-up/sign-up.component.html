@@ -10,7 +10,7 @@
          <div *ngIf="username.errors?.['pattern']">Username should be valid</div>
     </small>
       </div>
-      
+
       <div class="field">
       <label for="email"><b>Email</b></label>
       <input type="text" formControlName="email" name="email" placeholder="Enter Email" maxlength="40" required>
@@ -31,15 +31,14 @@
        <div class="field">
          <label for="confirmPassword"><b>confirm Password</b></label>
          <input type="password" formControlName="confirmPassword" name="confirmPassword" placeholder="Confirm Password" maxLength="30" required>
-         <small *ngIf="confirmPassword.invalid && (confirmPassword.dirty || confirmPassword.touched)">
-             <div *ngIf="confirmPassword.errors?.['required']">Confirmation is required</div>
-             <div *ngIf="signupform?.errors?.['PasswordMismatch'] && signupform?.touched">
+             <div *ngIf="confirmPassword.errors?.['required'] && (confirmPassword.dirty || confirmPassword.touched)">Confirmation is required</div>
+             <div *ngIf="signupform?.errors?.['PasswordMismatch']!= null  && signupform?.touched && confirmPassword.errors?.['required']!= true">
          Password should match
         </div>
-        </small>
-        
+
+
      </div>
-     
+
          <input type="checkbox" name="remember">
      <label for="rememberCheckBox">Remember me</label>
 

@@ -10,7 +10,6 @@ export class ArtificialIntelligenceComponent {
 
   press(value: string) {
     this.graphInput.emit(value);
-    console.log(value)
   }
 
 }

@@ -11,7 +11,7 @@ interface Dictionary<T> {
 
 export class GraphComponent {
 
-  @Input() input = null
+  @Input() input: any='input initialized '
 
   graph: Dictionary<any> = {
     'layer-0': this.input,
@@ -21,6 +21,15 @@ export class GraphComponent {
     'layer-4': null,
     'layer-5': null
   }
+
+  constructor() {
+    console.log(Object.values(this.graph)[0])
+  }
+
+  get(){
+
+  }
+
 
 }
 

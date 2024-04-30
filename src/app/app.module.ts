@@ -7,6 +7,7 @@ import {UserModule} from "./Components/User/user.module";
 import {HttpClientModule} from "@angular/common/http";
 import { FormsModule } from '@angular/forms';
 import {DashboardComponent} from "./Components/Dashboard/dashboard.component";
+import {ContactUsComponent} from "./Components/Contact-us/contact-us.component";
 
 @NgModule({
   imports: [
@@ -19,9 +20,11 @@ import {DashboardComponent} from "./Components/Dashboard/dashboard.component";
     RouterLink,
 
 
+
   ],
   declarations: [
-    DashboardComponent
+    DashboardComponent,
+    ContactUsComponent
   ],
   exports: [],
   bootstrap: [AppComponent]

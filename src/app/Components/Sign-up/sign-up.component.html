@@ -1,4 +1,4 @@
-<form [formGroup]="signupform">
+<form [formGroup]="signUpForm">
    <div class="formContainer">
       <h1>Signup Form</h1>
       <hr>
@@ -32,7 +32,7 @@
          <label for="confirmPassword"><b>confirm Password</b></label>
          <input type="password" formControlName="confirmPassword" name="confirmPassword" placeholder="Confirm Password" maxLength="30" required>
              <div *ngIf="confirmPassword.errors?.['required'] && (confirmPassword.dirty || confirmPassword.touched)">Confirmation is required</div>
-             <div *ngIf="signupform?.errors?.['PasswordMismatch']!= null  && signupform?.touched && confirmPassword.errors?.['required']!= true">
+             <div *ngIf="signUpForm?.errors?.['passwordMismatch']!= null  && signUpForm?.touched && confirmPassword.errors?.['required']!= true">
          Password should match
         </div>
 
@@ -43,7 +43,7 @@
      <label for="rememberCheckBox">Remember me</label>
 
       <div>
-        <button [disabled]="signupform.invalid">Sign Up</button>
+        <button [disabled]="signUpForm.invalid">Sign Up</button>
         <br>
         <div>Already have an account? <a routerLink="/Log-in">Register</a> </div>
         </div>

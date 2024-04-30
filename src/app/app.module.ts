@@ -6,6 +6,7 @@ import {routes} from "./app.routes";
 import {SignUpModule} from "./Components/Sign-up/sign-up.module";
 import {HttpClientModule} from "@angular/common/http";
 import { FormsModule } from '@angular/forms';
+import {DashboardComponent} from "./Components/Dashboard/dashboard.component";
 
 @NgModule({
   imports: [
@@ -15,11 +16,12 @@ import { FormsModule } from '@angular/forms';
     RouterModule.forChild(routes),
     SignUpModule,
     HttpClientModule,
-    RouterLink
+    RouterLink,
+
 
   ],
   declarations: [
-
+    DashboardComponent
   ],
   exports: [],
   bootstrap: [AppComponent]

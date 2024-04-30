@@ -6,24 +6,26 @@ import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'log-in-component',
+  inputs: [],
+  outputs: [],
   templateUrl: './log-in.component.html',
   styleUrl: './log-in.component.css'
 })
 
 export class LogInComponent {
 
-  loginform = this.fb.group({
+  loginForm = this.formBuilder.group({
     email: ['', [Validators.required, Validators.email]],
     password: ['', Validators.required]
   })
 
-  constructor(private fb: FormBuilder) {}
+  constructor(private formBuilder: FormBuilder) {}
 
   get email() {
-    return this.loginform.controls['email'];
+    return this.loginForm.controls['email'];
   }
   get password() {
-    return this.loginform.controls['password'];
+    return this.loginForm.controls['password'];
   }
 
 }

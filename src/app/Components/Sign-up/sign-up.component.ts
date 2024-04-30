@@ -8,6 +8,8 @@ import { validateHeaderName } from 'http';
 
 @Component({
   selector: 'sign-up-component',
+  inputs: [],
+  outputs: [],
   templateUrl: './sign-up.component.html',
   styleUrl: './sign-up.component.css'
 })
@@ -17,12 +19,12 @@ export class SignUpComponent {
     return control.get('password')?.value ===
       control.get('confirmPassword')?.value
       ? null
-      : { PasswordMismatch: false}
+      : { passwordMismatch: false}
 
 
   }
 
-  signupform = this.fb.group({
+  signUpForm = this.formBuilder.group({
     username: ['', [Validators.required, Validators.pattern(/^[A-Za-z][A-Za-z0-9_]{7,29}$/)]],
     email: ['', [Validators.required, Validators.email]],
     password: ['', Validators.required],
@@ -35,23 +37,23 @@ export class SignUpComponent {
 
 
 
-  constructor(private fb: FormBuilder) {
+  constructor(private formBuilder: FormBuilder) {
 
   }
 
   get username() {
-    return this.signupform.controls['username'];
+    return this.signUpForm.controls['username'];
   }
 
   get email() {
-    return this.signupform.controls['email'];
+    return this.signUpForm.controls['email'];
   }
 
   get password() {
-    return this.signupform.controls['password'];
+    return this.signUpForm.controls['password'];
   }
 
   get confirmPassword() {
-    return this.signupform.controls['confirmPassword'];
+    return this.signUpForm.controls['confirmPassword'];
   }
 }

@@ -7,4 +7,10 @@ import {Component, EventEmitter, Output} from '@angular/core';
 
 export class ArtificialIntelligenceComponent {
   @Output() graphInput = new EventEmitter<string>();
+
+  press(value: string) {
+    this.graphInput.emit(value);
+    console.log(value)
+  }
+
 }

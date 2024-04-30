@@ -1,6 +1,7 @@
 <div>
   <div>
     <label for="searchBar"><b>AI assistant</b></label>
-    <input type="text" id="searchBar" placeholder="Search AI">
+    <input type="text" id="searchBar" placeholder="Search AI" #input>
+    <button (click)="press(input.value)">press</button>
   </div>
 </div>

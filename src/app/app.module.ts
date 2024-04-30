@@ -8,7 +8,7 @@ import {HttpClientModule} from "@angular/common/http";
 import { FormsModule } from '@angular/forms';
 import {DashboardComponent} from "./Components/Dashboard/dashboard.component";
 import {ContactUsComponent} from "./Components/Contact-us/contact-us.component";
-import {ArtificialIntelligenceComponent} from "./Components/AI/artificial-intelligence.component";
+import {ArtificialIntelligenceModule} from "./Components/AI/artificial-intelligence.module";
 
 @NgModule({
   imports: [
@@ -19,6 +19,7 @@ import {ArtificialIntelligenceComponent} from "./Components/AI/artificial-intell
     UserModule,
     HttpClientModule,
     RouterLink,
+    ArtificialIntelligenceModule
 
 
 
@@ -26,7 +27,6 @@ import {ArtificialIntelligenceComponent} from "./Components/AI/artificial-intell
   declarations: [
     DashboardComponent,
     ContactUsComponent,
-    ArtificialIntelligenceComponent
   ],
   exports: [],
   bootstrap: [AppComponent]

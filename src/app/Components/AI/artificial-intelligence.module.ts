@@ -2,6 +2,7 @@
 import {CommonModule} from "@angular/common";
 import {NgModule} from "@angular/core";
 import {GraphComponent} from "./graph.component";
+import {ArtificialIntelligenceComponent} from "./artificial-intelligence.component";
 
 
 
@@ -14,9 +15,9 @@ import {GraphComponent} from "./graph.component";
 
   ],
   declarations: [
-
+    ArtificialIntelligenceComponent
   ],
 
 
 })
-export class UserModule { }
+export class ArtificialIntelligenceModule { }

@@ -1,11 +1,10 @@
 import {Injectable} from "@angular/core";
-import {HttpClient} from "@angular/common/http";
 
 @Injectable({
   providedIn: 'root'
  })
 
-export class SignUpService{
+export class UserService {
 
   // endpoint: string = 'https://reqres.in/api/signup'
   //

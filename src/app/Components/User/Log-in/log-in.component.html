@@ -1,0 +1,47 @@
+<form [formGroup]="loginForm">
+    <div>
+       <h1>Login Form</h1>
+       <hr>
+
+       <div>
+         <label for="username"><b>Username</b></label>
+         <input type="text" formControlName="username" id="username" placeholder="User name" maxlength="25" required>
+       </div>
+
+       <div>
+         <label for="email"><b>Email</b></label>
+         <input type="text" formControlName="email" id="email" placeholder="Enter Email" maxlength="40" required>
+         <small *ngIf="email.invalid && (email.dirty || email.touched)">
+            <div *ngIf="email.errors?.['required']">
+              <p>Email is required</p>
+            </div>
+            <div *ngIf="email.errors?.['email']">
+              <p>Email should be valid</p>
+            </div>
+         </small>
+       </div>
+
+       <div>
+         <label for="password"><b>Password</b></label>
+         <input type="password" formControlName="password" id="password" placeholder="Enter Password" maxLength="30" required>
+         <small *ngIf="password.invalid && (password.dirty || password.touched)">
+           <div *ngIf="password.errors?.['required']">
+             <p>Password is required</p>
+           </div>
+         </small>
+       </div>
+
+       <div>
+         <input type="checkbox" id="rememberCheckBox">
+         <label for="rememberCheckBox">Remember me</label>
+       </div>
+
+       <div>
+         <button [disabled]="loginForm.invalid">Sign in</button>
+         <br>
+         <p>Don't have an account? <a routerLink="/Sign-up">Register</a> </p>
+       </div>
+    </div>
+ </form>
+
+

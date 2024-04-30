@@ -6,8 +6,8 @@ import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'log-in-component',
-  inputs: [],
-  outputs: [],
+  inputs: ['email', 'password', 'username'],
+  outputs: ['key'],
   templateUrl: './log-in.component.html',
   styleUrl: './log-in.component.css'
 })

@@ -1,15 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators, FormBuilder, FormsModule, ValidatorFn, AbstractControlDirective, ValidationErrors } from '@angular/forms';
 import { AbstractControl } from '@angular/forms';
-import {SignUpService} from "./sign-up.service";
+import {UserService} from "../user.service";
 import { validateHeaderName } from 'http';
 
 
 
 @Component({
   selector: 'sign-up-component',
-  inputs: [],
-  outputs: [],
+  inputs: ['email', 'password', 'username'],
+  outputs: ['key','email', 'password', 'username', 'id'],
   templateUrl: './sign-up.component.html',
   styleUrl: './sign-up.component.css'
 })

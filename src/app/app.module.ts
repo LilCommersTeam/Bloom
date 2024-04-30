@@ -8,6 +8,7 @@ import {HttpClientModule} from "@angular/common/http";
 import { FormsModule } from '@angular/forms';
 import {DashboardComponent} from "./Components/Dashboard/dashboard.component";
 import {ContactUsComponent} from "./Components/Contact-us/contact-us.component";
+import {ArtificialIntelligenceComponent} from "./Components/AI/artificial-intelligence.component";
 
 @NgModule({
   imports: [
@@ -24,7 +25,8 @@ import {ContactUsComponent} from "./Components/Contact-us/contact-us.component";
   ],
   declarations: [
     DashboardComponent,
-    ContactUsComponent
+    ContactUsComponent,
+    ArtificialIntelligenceComponent
   ],
   exports: [],
   bootstrap: [AppComponent]

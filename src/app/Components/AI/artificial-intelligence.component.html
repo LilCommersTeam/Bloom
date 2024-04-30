@@ -4,4 +4,6 @@
     <input type="text" id="searchBar" placeholder="Search AI" #input>
     <button (click)="press(input.value)">press</button>
   </div>
+
+  <graph-component [input]="input"></graph-component>
 </div>

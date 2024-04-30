@@ -10,12 +10,12 @@ import {ArtificialIntelligenceComponent} from "./artificial-intelligence.compone
 
 @NgModule({
   imports: [
-    CommonModule,
-    GraphComponent
+    CommonModule
 
   ],
   declarations: [
-    ArtificialIntelligenceComponent
+    ArtificialIntelligenceComponent,
+    GraphComponent
   ],
 
 

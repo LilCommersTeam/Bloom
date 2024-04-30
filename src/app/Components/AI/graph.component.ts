@@ -5,9 +5,8 @@ interface Dictionary<T> {
 }
 
 @Component({
-  selector: 'artificial-intelligence-component',
+  selector: 'graph-component',
   template: ``,
-  standalone: true,
 })
 
 export class GraphComponent {

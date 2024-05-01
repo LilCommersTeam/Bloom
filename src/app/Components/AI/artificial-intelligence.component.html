@@ -3,7 +3,6 @@
     <label for="searchBar"><b>AI assistant</b></label>
     <input type="text" id="searchBar" placeholder="Search AI" #input>
     <button (click)="press(input.value)">press</button>
+    <button (click)="get()">get</button>
   </div>
-
-  <graph-component hidden=true [input]="graphInput"></graph-component>
 </div>

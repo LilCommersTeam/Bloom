@@ -1,4 +1,6 @@
 import {Component, Input} from '@angular/core';
+import {GraphService} from "./graph.service";
+
 
 interface Dictionary<T> {
   [Key: string]: T;
@@ -11,10 +13,14 @@ interface Dictionary<T> {
 
 export class GraphComponent {
 
-  @Input() input: any='input initialized '
+
+  constructor(private graphService: GraphService) {
+
+
+  }
 
   graph: Dictionary<any> = {
-    'layer-0': this.input,
+    'layer-0': '',
     'layer-1': null,
     'layer-2': null,
     'layer-3': null,
@@ -22,12 +28,9 @@ export class GraphComponent {
     'layer-5': null
   }
 
-  constructor() {
-    console.log(Object.values(this.graph)[0])
-  }
 
   get(){
-
+    this.graphService.setData(Object.values(this.graph)[0])
   }
 
 

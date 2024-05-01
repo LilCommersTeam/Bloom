@@ -1,4 +1,5 @@
-import {Component, EventEmitter, Output} from '@angular/core';
+import {Component} from '@angular/core';
+import {GraphService} from "./graph.service";
 
 @Component({
   selector: 'artificial-intelligence-component',
@@ -6,10 +7,23 @@ import {Component, EventEmitter, Output} from '@angular/core';
 })
 
 export class ArtificialIntelligenceComponent {
-  @Output() graphInput = new EventEmitter<string>();
+
+  input : any
+  output: any
+
+  constructor(private graphService: GraphService) {
+}
 
   press(value: string) {
-    this.graphInput.emit(value);
+    this.input = value
   }
+
+  get(){
+    this.graphService.setData(this.input)
+    this.output = this.graphService.getData()
+    this.graphService.console()
+    console.log(this.output + '  this is output')
+  }
+
 
 }

@@ -5,7 +5,7 @@ import {NgModule} from "@angular/core";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
 import { LogInComponent } from "./Log-in/log-in.component";
-
+import {UserService} from "./user.service";
 
 
 @NgModule({

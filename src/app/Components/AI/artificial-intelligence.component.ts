@@ -16,10 +16,10 @@ export class ArtificialIntelligenceComponent {
 
   press(value: string) {
     this.input = value
+    this.graphService.setData(this.input)
   }
 
   get(){
-    this.graphService.setData(this.input)
     this.output = this.graphService.getData()
     this.graphService.console()
     console.log(this.output + '  this is output')

@@ -1,11 +1,8 @@
-
 import {CommonModule} from "@angular/common";
 import {NgModule} from "@angular/core";
 import {GraphComponent} from "./graph.component";
 import {ArtificialIntelligenceComponent} from "./artificial-intelligence.component";
-
-
-
+import {GraphService} from "./graph.service";
 
 
 @NgModule({
@@ -17,6 +14,9 @@ import {ArtificialIntelligenceComponent} from "./artificial-intelligence.compone
     ArtificialIntelligenceComponent,
     GraphComponent
   ],
+  providers:[
+    GraphService
+  ]
 
 
 })

@@ -14,14 +14,13 @@ export class ArtificialIntelligenceComponent {
   constructor(private graphService: GraphService) {
 }
 
-  press(value: string) {
-    this.input = value
+  press() {
     this.graphService.setData(this.input)
+    this.graphService.console()
   }
 
   get(){
     this.output = this.graphService.getData()
-    this.graphService.console()
     console.log(this.output + '  this is output')
   }
 

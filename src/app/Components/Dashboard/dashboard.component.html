@@ -1,0 +1,14 @@
+<div>
+
+<div class="togglechat" *ngIf="ChatIsClosed">
+    <button type="button" (click)="toggleChat()"></button>
+</div>
+
+<div class="chatbox" *ngIf="!ChatIsClosed">
+    <chat-component></chat-component>
+    <div class="close">
+        <button type="button" (click)="toggleChat()"></button>
+    </div>
+</div>
+
+</div>

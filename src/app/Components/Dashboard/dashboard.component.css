@@ -1,0 +1,78 @@
+.togglechat {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    width: 69px;
+    height: 69px;
+    background: purple;
+    border: 1px solid black;
+    border-radius: 100%;
+    overflow: hidden;
+    animation: toggle-chat 0.2s;
+}
+
+.togglechat button{
+    width: 73px;
+    height: 73px;
+    margin-left: -2px;
+    margin-top: -2px;
+    background: transparent;
+}
+
+@keyframes toggle-chat {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+    
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    }
+
+.chatbox{
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    height: 500px;
+    width: 400px;
+    background-color: rgb(43, 43, 43);
+    border: 1px solid black;
+    border-radius: 10px;
+    overflow: hidden;
+    animation: chat-box 0.2s;
+}
+
+@keyframes chat-box {
+0% {
+    opacity: 0;
+    transform: scale(0);
+}
+
+100% {
+    opacity: 1;
+    transform: scale(1);
+}
+}
+
+.chatbox .close{
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    width: 35px;
+    height: 35px;
+    background: purple;
+    border: 1px solid black;
+    overflow: hidden;
+    border-bottom-left-radius: 10px;
+}
+
+.chatbox .close button{
+    width: 75px;
+    height: 75px;
+    margin-left: -2px;
+    margin-top: -2px;
+    background: transparent;
+}
+

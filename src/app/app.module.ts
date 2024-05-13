@@ -10,6 +10,7 @@ import {DashboardComponent} from "./Components/Dashboard/dashboard.component";
 import {ContactUsComponent} from "./Components/Contact-us/contact-us.component";
 import {ChatComponent} from "./Components/Chat/chat.component";
 import {ArtificialIntelligenceModule} from "./Components/AI/artificial-intelligence.module";
+import {AdminComponent} from "./Components/Admin/admin.component";
 
 @NgModule({
   imports: [
@@ -29,6 +30,7 @@ import {ArtificialIntelligenceModule} from "./Components/AI/artificial-intellige
     DashboardComponent,
     ContactUsComponent,
     ChatComponent,
+    AdminComponent
   ],
   exports: [],
   bootstrap: [AppComponent]

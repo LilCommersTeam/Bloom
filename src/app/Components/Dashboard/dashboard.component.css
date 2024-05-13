@@ -1,4 +1,4 @@
-.togglechat {
+.toggle_chat {
     position: absolute;
     right: 10px;
     bottom: 10px;
@@ -11,7 +11,7 @@
     animation: toggle-chat 0.2s;
 }
 
-.togglechat button{
+.toggle_chat button{
     width: 73px;
     height: 73px;
     margin-left: -2px;
@@ -24,14 +24,14 @@
         opacity: 0;
         transform: scale(0);
     }
-    
+
     100% {
         opacity: 1;
         transform: scale(1);
     }
     }
 
-.chatbox{
+.chat_box{
     position: absolute;
     right: 20px;
     bottom: 20px;
@@ -56,7 +56,7 @@
 }
 }
 
-.chatbox .close{
+.chat_box .close{
     position: absolute;
     right: 0px;
     top: 0px;
@@ -68,7 +68,7 @@
     border-bottom-left-radius: 10px;
 }
 
-.chatbox .close button{
+.chat_box .close button{
     width: 75px;
     height: 75px;
     margin-left: -2px;

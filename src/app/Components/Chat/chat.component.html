@@ -2,8 +2,9 @@
 
 <div class="send-text">
     <form >
-        <input type="text" placeholder="write messege" (keydown.enter)="sendMessege" #messege>
-        <button type="button" (click)="sendMessege"></button>
+        <input type="text" placeholder="write messege"   #messege>
+        <button type="button" (click)="get(messege.value)"></button>
+
     </form>
 </div>
 

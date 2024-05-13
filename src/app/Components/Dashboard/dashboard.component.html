@@ -1,11 +1,16 @@
 <div>
 
-<div class="togglechat" *ngIf="ChatIsClosed">
+<div class="toggle_chat" *ngIf="ChatIsClosed">
     <button type="button" (click)="toggleChat()"></button>
 </div>
 
-<div class="chatbox" *ngIf="!ChatIsClosed">
-    <chat-component></chat-component>
+<div class="chat_box" *ngIf="!ChatIsClosed">
+    <p style="color: white;text-align: center;font-size: 20px">{{notification}}</p>
+    <p style="color: red;text-align: center;font-size: 15px">{{warningForLogin}}</p>
+    <ul *ngFor="let messege of items">
+      <div style="max-width:50%;min-width:150px;background: #ffeec0;padding:2px;margin:3px;border-radius: 2px;border:1px solid #ffdd7c;clear: left;"> <p>{{messege}}</p></div>
+    </ul>
+    <chat-component (newItemEvent)="addItem($event)"></chat-component>
     <div class="close">
         <button type="button" (click)="toggleChat()"></button>
     </div>

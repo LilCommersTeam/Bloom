@@ -1,4 +1,4 @@
-import { Component} from '@angular/core';
+import {Component, ElementRef, ViewChild} from '@angular/core';
 
 @Component({
   selector: 'panel-component',
@@ -8,9 +8,12 @@ import { Component} from '@angular/core';
 
 export class PanelComponent {
   elements = ['main']
+  @ViewChild('element') element!: ElementRef;
 
 
   get(value:any){
-   this.elements.push(value)
+  if(value !== '' ){this.elements.push(value)}
+  this.element.nativeElement.value = '';
+
 }
 }

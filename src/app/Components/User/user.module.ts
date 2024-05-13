@@ -6,6 +6,7 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
 import { LogInComponent } from "./Log-in/log-in.component";
 import {UserService} from "./user.service";
+import {PanelComponent} from "./Panel/panel.component";
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import {UserService} from "./user.service";
   ],
   declarations: [
     SignUpComponent,
-    LogInComponent
+    LogInComponent,
+    PanelComponent
   ],
 
 })

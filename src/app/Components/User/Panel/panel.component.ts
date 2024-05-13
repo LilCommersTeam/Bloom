@@ -6,4 +6,11 @@ import { Component} from '@angular/core';
   styleUrl: './panel.component.css'
 })
 
-export class PanelComponent {}
+export class PanelComponent {
+  elements = ['main']
+
+
+  get(value:any){
+   this.elements.push(value)
+}
+}

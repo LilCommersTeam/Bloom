@@ -1,0 +1,30 @@
+.main-buttons{
+  display: flex;
+  border: #132b8b 2px solid;
+  background-color: #2aabd2;
+}
+
+.add-button{
+  margin-left: 5px;
+  float: left;
+  width: 50%;
+}
+
+.delete-button{
+  margin-left: 50%;
+}
+
+.main-panel{
+  display: flex;
+  margin-top: 10px ;
+  border: #132b8b 2px solid;
+  background-color: #a6ecff;
+
+}
+.element{
+  margin: 30px 30px 30px 30px ;
+  padding: 20px 30px 20px 30px;
+  border: #001d48 2px solid;
+  background-color: #337ab7;
+  color: #ffffff;
+}

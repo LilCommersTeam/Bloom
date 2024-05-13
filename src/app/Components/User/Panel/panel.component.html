@@ -1,3 +1,16 @@
-<p>
-Esi is working ....
-</p>
+<div>
+  <div class="main-buttons">
+    <input type="text" style="width: 250px" #element>
+    <div class="add-button">
+      <button style="font-size: 20px" (click)="get(element.value)">add</button>
+    </div>
+    <div class="delete-button">
+      <button style="font-size: 20px">delete</button>
+    </div>
+  </div>
+  <div class="main-panel">
+    <div class="element" *ngFor="let element of elements">
+      <p>{{element}}</p>
+    <div>
+  </div>
+</div>

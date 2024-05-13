@@ -8,6 +8,7 @@ import {HttpClientModule} from "@angular/common/http";
 import { FormsModule } from '@angular/forms';
 import {DashboardComponent} from "./Components/Dashboard/dashboard.component";
 import {ContactUsComponent} from "./Components/Contact-us/contact-us.component";
+import {ChatComponent} from "./Components/Chat/chat.component";
 import {ArtificialIntelligenceModule} from "./Components/AI/artificial-intelligence.module";
 
 @NgModule({
@@ -27,6 +28,7 @@ import {ArtificialIntelligenceModule} from "./Components/AI/artificial-intellige
   declarations: [
     DashboardComponent,
     ContactUsComponent,
+    ChatComponent,
   ],
   exports: [],
   bootstrap: [AppComponent]
